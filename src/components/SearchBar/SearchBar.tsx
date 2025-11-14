@@ -1,5 +1,5 @@
 import css from "./SearchBar.module.css";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 export interface SearchBarProps {
   onSubmit: (query: string) => void;
@@ -23,6 +23,7 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
   return (
     <header className={css.header}>
       <div className={css.container}>
+        <Toaster />
         <a
           className={css.link}
           href="https://www.themoviedb.org/"
